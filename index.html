@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html >
 <head>
-	<title>Hometask 9-40</title>
+	<title>Hometask 9-10</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/nice-select.css">
@@ -10,12 +10,9 @@
 	<script src="js/jquery.nice-select.js"></script>
 </head>
 <body>
-	<div class="container">
-		
-		
+	<section class="jcarousel-section">
 		<div class="jcarousel-wrapper">
 			<a href="#" class="jcarousel-prev">&lsaquo;</a>
-			
 				<div class="jcarousel">
 					<ul>
 						<li><img src="img/slide1.jpg" width="600" height="400" alt=""></li>
@@ -26,20 +23,15 @@
 						<li><img src="img/slide6.jpg" width="600" height="400" alt=""></li>
 					</ul>
 				</div>	
-				
-			
 			<a href="#" class="jcarousel-next">&rsaquo;</a>
-
-			
 		</div>
-
+        
         <div class="jcarousel-pagination">
 	    		<!-- Pagination items will be generated in here -->
 		</div>
-
-	</div>
+	</section>
 	
-	<div class="select-wrapper">
+	<section class="select-section">
 		<select>
 			<option data-display="Select">Nothing</option>
 			<option value="1">Some option</option>
@@ -47,7 +39,23 @@
 			<option value="3" disabled>A disabled option</option>
 			<option value="4">Potato</option>
 		</select>
-	</div>	
+	</section>
+
+	<section class="checkbox-section">
+		<form class="checkbox_js"> <span>JS</span>
+			<label><input type="checkbox" name="checkbox_js" value="off">Вариант 1</label>
+			<label><input type="checkbox" name="checkbox_js" value="off">Вариант 2</label>
+			<label><input type="checkbox" name="checkbox_js" value="off">Вариант 3</label>
+		</form>
+
+		<form class="checkbox_css"> <span>CSS3</span>
+			<label><input type="checkbox" name="checkbox_css" value="off">Вариант 1</label>
+			<label><input type="checkbox" name="checkbox_css" value="off">Вариант 2</label>
+			<label><input type="checkbox" name="checkbox_css" value="off">Вариант 3</label>
+		</form>
+	</section>
+
+
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

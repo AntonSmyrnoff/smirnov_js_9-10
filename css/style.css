@@ -5,14 +5,14 @@
 	font-family: Arial;
 }
 
-.container {
+.jcarousel-section {
 	width: 100%;
 	height: auto;
-	margin: 10% auto;
+	margin: 2% auto;
 }
 
 .jcarousel-wrapper {
-	height: 500px;
+	height: 550px;
 	background-color: #a1a1a1;
 	display: flex;
 	justify-content: center;
@@ -39,7 +39,7 @@
 
 .jcarousel-pagination {
 	text-align: center;
-	margin-top: -25px;
+	margin-top: -40px;
 }
 
 .jcarousel-pagination a {
@@ -74,9 +74,35 @@ a.active {
 	color: #f00;
 }
 
-.select-wrapper {
+.select-section {
 	height: 42px;
 	width: 89px;
-	margin: 0 auto;
+	margin: 5% auto;
 }
 
+
+
+/* -------CHECKBOX-------- */
+.checkbox-section{ 
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkbox-section form {
+    margin: 2% 20%;
+    text-align: center;
+}
+
+.checkbox-section form label {
+    display: block;
+    margin: 15px 0;
+}
+
+.checkbox-section form span {
+    color: #f00;
+    font-size: 18px;
+}
+
+.checkbox-section label input {
+    margin-right: 5px;
+}
