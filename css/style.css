@@ -110,31 +110,19 @@ a.active {
 .niceCheck {
 	width: 17px;
 	height: 17px;
-	margin-right: 5px;
 	display: inline-block;
 	cursor: pointer;
-	background: url('../img/checkbox-sprite.png');
-}
-
-.niceCheck input {
-	display: none;
-}
-
-.niceCheckJs {
-	width: 17px;
-	height: 17px;
-	margin-right: 5px;
-	display: inline-block;
-	cursor: pointer;
-	background: url('../img/checkbox-sprite.png');
+	background: url('../img/checkbox.png');
 	overflow: hidden;
 }
-
-.niceCheckJs input {
-	margin-left: -100px;
+.niceChecked {
+	background-position: 0 -17px;
 }
-
-.niceCheckJsDisabled {
+.niceCheck input {
+	margin-left: -100px; /* можно задать побольше чтобы наверняка скрыть поле */
+}
+.niceCheckDisabled {
 	background-image: url('../img/checkbox-disabled.png');
 }
+
 
