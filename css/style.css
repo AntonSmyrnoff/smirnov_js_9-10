@@ -93,18 +93,18 @@ a.active {
     text-align: center;
 }
 
+.checkbox-section div {
+    display: flex;
+    padding-top: 10px;
+}
+
 .checkbox-section form label {
     display: flex;
-    margin: 15px 0;
 }
 
 .checkbox-section form>span {
     color: #f00;
     font-size: 18px;
-}
-
-.checkbox-section label input {
-    margin-right: 10px;
 }
 
 span.jqueryCheck {
@@ -114,7 +114,7 @@ span.jqueryCheck {
 	margin-right: 5px;
 	cursor: pointer;
 	background: url('../img/checkbox.png');
-	/* overflow: hidden; */
+	overflow: hidden;
 }
 span.jqueryChecked {
 	background-position: 0 -17px;

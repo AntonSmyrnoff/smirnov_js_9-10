@@ -38,27 +38,26 @@ $(document).ready(function() {
 
 /*-----CHECKBOX-----*/
 
-
-/*$(document).ready(function(){
-
-	$(".niceCheck").each( //для каждого <span class = "niceCheck"> выполняется функция
-		function() {
-		     changeCheckStart($(this));
-		}
-	);
-});*/
- 
  $(document).ready(function() {
  	$('.jqueryCheck').each (
  		
  		function () {
- 			changeCheckStart($(this));
+ 			changeCheckStart($(this));// меняем внешний вид при загрузке
 
  	})
- })
 
 
-function changeCheckStart(el) {
+ 	$('.jqueryCheck').each(
+ 		
+ 		function () {
+ 			changeStatus($(this)); //обработчик кликов
+
+ 	})
+
+  })
+
+
+function changeCheckStart(el) { //функция изменения внешнего вида чекбокса
 	var el = el,
 		checkName = el.attr("name"),
 		checkId = el.attr("id"),
@@ -67,7 +66,7 @@ function changeCheckStart(el) {
 		checkChecked = el.attr("checked");
 		checkDisabled = el.attr("disabled");
 
-	if (checkChecked) 	
+	if (checkChecked) //вставляем новый элемент с новым чекбоксом после исходного элемента 	
 		el.after("<span class='jqueryCheck jqueryChecked'><input type='checkbox'" + 
 					" name='" + checkName + 
 					"' id='" + checkId +
@@ -89,26 +88,28 @@ function changeCheckStart(el) {
 		el.next().find("input").attr("disabled","disabled");
 	};
 
-	el.next().bind('click', function() {
-		if (el.attr("checked")) {
-			el.next().removeClass("jqueryChecked");
-			el.find("input").attr("checked", false)
-		} else {
-			el.next().addClass("jqueryChecked");
-			el.find("input").attr("checked", true)
-		}
-	})
-
-
-
-
-
-	el.remove();
-
-
-
+	el.remove(); //удаляем исходный элемент
 
 }
+
+
+function changeStatus(el) {
+		var el = el,
+			input = el.find('input');
+		
+		input.bind('change', function() { //при любом изменении инпута выполняется функция
+			
+			if (!input.attr("checked")) {
+				el.addClass("jqueryChecked");
+				input.attr("checked", true)
+			} 
+			else {
+				el.removeClass("jqueryChecked");
+				input.attr("checked", false)
+			};
+
+		})
+}	
 
 
 
