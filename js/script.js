@@ -84,7 +84,7 @@ function changeCheckStart(el) { //функция изменения внешне
 
 	
 	if (checkDisabled) {
-		el.next().addClass("niceCheckDisabled");
+		el.next().addClass("jQueryCheckDisabled");
 		el.next().find("input").attr("disabled","disabled");
 	};
 

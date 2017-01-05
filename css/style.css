@@ -82,7 +82,7 @@ a.active {
 
 
 
-/* -------CHECKBOX-------- */
+/* -------CHECKBOX_JQUERY-------- */
 .checkbox-section{ 
     display: flex;
     justify-content: space-around;
@@ -122,8 +122,33 @@ span.jqueryChecked {
 span.jqueryCheck input {
 	margin-left: -100px; 
 }
-span.niceCheckDisabled {
+span.jQueryCheckDisabled {
 	background-image: url('../img/checkbox-disabled.png');
 }
 
+
+/* -----CHECKBOX_CSS------ */
+.checkbox_css input[type=checkbox] {
+	margin-right: 10px;
+	position: absolute;
+	clip: rect(0, 0, 0, 0);
+}
+
+.checkbox_css label:before {
+	content: " ";
+	width: 17px;
+	height: 17px;
+	display: inline-block;
+	margin-right: 5px;
+	cursor: pointer;
+	background: url('../img/checkbox.png');
+}
+
+.checkbox_css input[type=checkbox]:checked + label:before {
+	background-position: 0 -17px;
+}
+
+.checkbox_css input[type=checkbox]:disabled + label:before {
+	background-image: url('../img/checkbox-disabled.png');
+}
 
