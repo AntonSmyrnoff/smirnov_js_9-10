@@ -39,121 +39,78 @@ $(document).ready(function() {
 /*-----CHECKBOX-----*/
 
 
-$(document).ready(function(){
+/*$(document).ready(function(){
 
 	$(".niceCheck").each( //для каждого <span class = "niceCheck"> выполняется функция
 		function() {
 		     changeCheckStart($(this));
 		}
 	);
-});
+});*/
+ 
+ $(document).ready(function() {
+ 	$('.jqueryCheck').each (
+ 		
+ 		function () {
+ 			changeCheckStart($(this));
+
+ 	})
+ })
 
 
-
-function changeCheckStart(el)
-/* 
-	новый чекбокс выглядит так <span class="niceCheck"><input type="checkbox" name="[name check]" id="[id check]" [checked="checked"] /></span>
-	новый чекбокс получает теже name, id и другие атрибуты что и были у обычного
-*/
-{
-
-try
-{
-var input = el.find('input').eq(0), //в каждом <span class = "niceCheck"> находим <input> 
-	checkName = input.attr("name"), //получаем атрибут "name"
-	checkId = input.attr("id"), //получаем атрибут "id"
-	checkChecked = input.attr("checked"), //получаем атрибут "checked"
-	checkDisabled = input.attr("disabled"), //получаем атрибут "disabled"
-	checkTab = input.attr("tabindex"), //получаем атрибут "tabindex"
-    checkValue = input.attr("value"); //получаем атрибут "value"
-    /*console.log("input: ", el);
-    console.log("name: ", checkName);
-    console.log("id: ", checkId);
-    console.log("checked: ", checkChecked);
-    console.log("disabled: ", checkDisabled);
-    console.log("tabindex: ", checkTab);
-    console.log("value: ", checkValue);*/
-
-	if(checkChecked)
-		el = el.replaceWith("<span class='niceCheck niceChecked'>"+
-			"<input type='checkbox'"+
-			"name='"+checkName+"'"+
-			"id='"+checkId+"'"+
-			"checked='"+checkChecked+"'"+
-            "value='"+checkValue+"'"+
-			"tabindex='"+checkTab+"' /></span>");
-	else
-		el = el.replaceWith("<span class='niceCheck'>"+
-			"<input type='checkbox'"+
-			"name='"+checkName+"'"+
-			"id='"+checkId+"'"+
-             "value='"+checkValue+"'"+
-			"tabindex='"+checkTab+"' /></span>");
-
-	/* если checkbox disabled - добавляем соотвсмтвующи класс для нужного вида и добавляем атрибут disabled для вложенного chekcbox */		
-	if(checkDisabled)
-		{
-			el.addClass("niceCheckDisabled");
-			el.find("input").eq(0).attr("disabled","disabled");
-		}
-	
-	/* цепляем обработчики стилизированным checkbox */		
-	el.next().bind("mousedown", function(e) { changeCheck(jQuery(this)) });
-	el.next().find("input").eq(0).bind("change", function(e) { changeVisualCheck(jQuery(this)) });
-	if(jQuery.browser.msie)
-	{
-		el.next().find("input").eq(0).bind("click", function(e) { changeVisualCheck(jQuery(this)) });	
-	}
-	el.remove();
-}
-catch(e)
-{
-	// если ошибка, ничего не делаем
-}
-
-    return true;
-}
-
-
-function changeCheck(el)
-/* 
-	функция смены вида и значения чекбокса при клике на контейнер чекбокса (тот, который отвечает за новый вид)
-	el - span контейнер для обычного чекбокса
-	input - чекбокс
-*/
-{
-
+function changeCheckStart(el) {
 	var el = el,
-		input = el.find("input").eq(0);
-		  
-	if(el.attr("class").indexOf("niceCheckDisabled")==-1)
-	{	
-   		if(!input.attr("checked")) {
-			el.addClass("niceChecked");
-			input.attr("checked", true);
-		} else {
-			el.removeClass("niceChecked");
-			input.attr("checked", false).focus();
-		}
-	}
+		checkName = el.attr("name"),
+		checkId = el.attr("id"),
+		checkTab = el.attr("tabindex"),
+		checkValue = el.attr("value"),
+		checkChecked = el.attr("checked");
+		checkDisabled = el.attr("disabled");
+
+	if (checkChecked) 	
+		el.after("<span class='jqueryCheck jqueryChecked'><input type='checkbox'" + 
+					" name='" + checkName + 
+					"' id='" + checkId +
+					"' tabindex='" + checkTab +
+					"' value='" + checkValue +
+					"' checked='" + checkChecked +
+					"'></span");
+	else 
+		el.after("<span class='jqueryCheck'><input type='checkbox'" + 
+					" name='" + checkName + 
+					"' id='" + checkId +
+					"' tabindex='" + checkTab +
+					"' value='" + checkValue +
+					"'></span");
+
 	
-    return true;
+	if (checkDisabled) {
+		el.next().addClass("niceCheckDisabled");
+		el.next().find("input").attr("disabled","disabled");
+	};
+
+	el.next().bind('click', function() {
+		if (el.attr("checked")) {
+			el.next().removeClass("jqueryChecked");
+			el.find("input").attr("checked", false)
+		} else {
+			el.next().addClass("jqueryChecked");
+			el.find("input").attr("checked", true)
+		}
+	})
+
+
+
+
+
+	el.remove();
+
+
+
+
 }
 
-function changeVisualCheck(input)
-{
-/*
-	меняем вид чекбокса при смене значения
-*/
-var wrapInput = input.parent();
-	if(!input.attr("checked")) {
-		wrapInput.removeClass("niceChecked");
-	}
-	else
-	{
-		wrapInput.addClass("niceChecked");
-	}
-}
+
 
 
 

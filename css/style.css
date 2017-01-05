@@ -104,24 +104,25 @@ a.active {
 }
 
 .checkbox-section label input {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
-.niceCheck {
+span.jqueryCheck {
 	width: 17px;
 	height: 17px;
 	display: inline-block;
+	margin-right: 5px;
 	cursor: pointer;
 	background: url('../img/checkbox.png');
-	overflow: hidden;
+	/* overflow: hidden; */
 }
-.niceChecked {
+span.jqueryChecked {
 	background-position: 0 -17px;
 }
-.niceCheck input {
-	margin-left: -100px; /* можно задать побольше чтобы наверняка скрыть поле */
+span.jqueryCheck input {
+	margin-left: -100px; 
 }
-.niceCheckDisabled {
+span.niceCheckDisabled {
 	background-image: url('../img/checkbox-disabled.png');
 }
 
