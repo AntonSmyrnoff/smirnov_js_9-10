@@ -10,26 +10,43 @@
 	<script src="js/jquery.nice-select.js"></script>
 </head>
 <body>
-	<section class="jcarousel-section">
-		<div class="jcarousel-wrapper">
-			<a href="#" class="jcarousel-prev">&lsaquo;</a>
-				<div class="jcarousel">
-					<ul>
-						<li><img src="img/slide1.jpg" width="600" height="400" alt=""></li>
-						<li><img src="img/slide2.jpg" width="600" height="400" alt=""></li>
-						<li><img src="img/slide3.jpg" width="600" height="400" alt=""></li>
-						<li><img src="img/slide4.jpg" width="600" height="400" alt=""></li>
-						<li><img src="img/slide5.jpg" width="600" height="400" alt=""></li>
-						<li><img src="img/slide6.jpg" width="600" height="400" alt=""></li>
-					</ul>
-				</div>	
-			<a href="#" class="jcarousel-next">&rsaquo;</a>
-		</div>
-        
-        <div class="jcarousel-pagination">
-	    		<!-- Pagination items will be generated in here -->
-		</div>
-	</section>
+	<nav>
+		<ul class="menu">
+			<li><a href="">Nav 1</a></li>
+			<li class="dropdown">
+				<a href="">jQuery</a>
+				<ul class="submenu submenu--jquery">
+					<li><a href="">Submenu-item 1</a></li>
+					<li><a href="">Submenu-item 2</a></li>
+					<li><a href="">Submenu-item 3</a></li>
+					<li class="dropdown">
+						<a href="">Submenu-item 4</a>
+						<ul class="submenu--secondLevel submenu--js">
+							<li><a href="">Submenu-item 1</a></li>
+							<li><a href="">Submenu-item 2</a></li>
+							<li><a href="">Submenu-item 3</a></li>
+							<li><a href="">Submenu-item 4</a></li>
+							<li><a href="">Submenu-item 5</a></li>
+						</ul>
+					</li>
+					<li><a href="">Submenu-item 5</a></li>
+				</ul>
+			</li>
+			<li><a href="">Nav 2</a></li>
+			<li class="dropdown">
+				<a href="">JS</a>
+				<ul class="submenu submenu--js">
+					<li><a href="">Submenu-item 1</a></li>
+					<li><a href="">Submenu-item 2</a></li>
+					<li><a href="">Submenu-item 3</a></li>
+					<li><a href="">Submenu-item 4</a></li>
+					<li><a href="">Submenu-item 5</a></li>
+				</ul>
+			</li>
+			<li><a href="">Nav 3</a></li>
+		</ul>
+	</nav>
+	
 	
 	<section class="select-section">
 		<select>
@@ -101,6 +118,27 @@
 				<label for="css_ch6">Вариант 6</label>
 			</div>
 		</form>
+	</section>
+
+	<section class="jcarousel-section">
+		<div class="jcarousel-wrapper">
+			<a href="#" class="jcarousel-prev">&lsaquo;</a>
+				<div class="jcarousel">
+					<ul>
+						<li><img src="img/slide1.jpg" width="600" height="400" alt=""></li>
+						<li><img src="img/slide2.jpg" width="600" height="400" alt=""></li>
+						<li><img src="img/slide3.jpg" width="600" height="400" alt=""></li>
+						<li><img src="img/slide4.jpg" width="600" height="400" alt=""></li>
+						<li><img src="img/slide5.jpg" width="600" height="400" alt=""></li>
+						<li><img src="img/slide6.jpg" width="600" height="400" alt=""></li>
+					</ul>
+				</div>	
+			<a href="#" class="jcarousel-next">&rsaquo;</a>
+		</div>
+        
+        <div class="jcarousel-pagination">
+	    		<!-- Pagination items will be generated in here -->
+		</div>
 	</section>
 
 

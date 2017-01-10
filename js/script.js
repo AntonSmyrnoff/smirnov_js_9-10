@@ -26,7 +26,7 @@ $(function() {
     })
     .on('jcarouselpagination:inactive', 'a', function() {
         $(this).removeClass('active');
-    });
+    }); 
 
 
 });
@@ -110,6 +110,33 @@ function changeStatus(el) {
 
 		})
 }	
+
+
+/*------- MENU--------*/
+$(function () {
+	var $links = $('.menu>li');
+
+	$links.on('mouseenter', function() {
+					var $submenu = $(this).find('ul.submenu');
+					$submenu.slideToggle();
+				})
+		   .on('mouseleave', function() {
+					var $submenu = $(this).find('ul.submenu');
+					$submenu.slideToggle();	
+				});
+
+	var $links = $('.dropdown .dropdown');
+
+	$links.on('mouseenter', function() {
+					var $submenu = $(this).find('ul.submenu--secondLevel');
+					$submenu.slideToggle();
+				})
+		   .on('mouseleave', function() {
+					var $submenu = $(this).find('ul.submenu--secondLevel');
+					$submenu.slideToggle();	
+				});
+
+})
 
 
 
