@@ -53,15 +53,6 @@
 	position: relative;
 }
 
-.submenu--secondLevel {
-	display: none;
-	position: absolute;
-	top: 0;
-	left: 190px;
-	background-color: rgb(225,75,75);
-	width: 190px;
-}
-
 .submenu a {
 	font-size: 16px;
 	line-height: 30px;
@@ -79,6 +70,16 @@
 	background-position: 160px 7px;
 	background-repeat: no-repeat;
 }
+
+.submenu--secondLevel {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 190px;
+	background-color: rgb(225,75,75);
+	width: 190px;
+}
+
 
 /* ------SELECT----- */
 .select-section {

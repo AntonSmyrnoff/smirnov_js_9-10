@@ -31,9 +31,11 @@ $(function() {
 
 });
 
-$(document).ready(function() {
+$(function() {
   $('select').niceSelect();
 });
+
+
 
 
 /*-----CHECKBOX-----*/
@@ -115,33 +117,29 @@ function changeStatus(el) {
 /*------- MENU--------*/
 $(function () {
 	var $links = $('.dropdown');
-	
-	$links.find('.dropdown>a').on('click', function(e) {
-		e.preventDefault();
-	});
+	var $dropdown = $links.children('a')
+		.on('click', function(e) { //отключаем переход по ссылке для линков с выпадающим меню
+			e.preventDefault();
+		});
 
-	$links.on('mouseenter', function() {
+	$links.on('mouseenter', function() { //раскрытие выпадающего меню первого уровня
 					var $submenu = $(this).find('ul.submenu');
 					$submenu.slideToggle(300);
 				})
-		   .on('mouseleave', function() {
+		  .on('mouseleave', function() {
 					var $submenu = $(this).find('ul.submenu');
 					$submenu.slideToggle(300);
 				});
 
-	
 	var $links = $('.dropdown .dropdown');
-
-	$links.on('mouseenter', function() {
+	$links.on('mouseenter', function() { //раскрытие выпадающего меню второго уровня
 					var $submenu = $(this).find('ul.submenu--secondLevel');
 					$submenu.slideToggle(300);
 				})
-		   .on('mouseleave', function() {
+		  .on('mouseleave', function() {
 					var $submenu = $(this).find('ul.submenu--secondLevel');
 					$submenu.slideToggle(300);	
 				});
-
-
 })
 
 
