@@ -1,0 +1,17 @@
+.sprite-drop-arrows {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAABECAYAAADk6ueFAAAB1ElEQVRoQ+2YTW7CMBBGYdMz9BrsuusZeomyQByoVS/TXXe9Rs/App0vIhEkcT0/34RI2JIVAo79Mn6xJ2w3KynblXBsGsh4JlpEVh+RNyF8vdET9C7j7ntHHuTkU+rTwjBfMt6z1NOlrI/yxbdUHJcoPzLITiqOk3UEEUFkEKHMcjpHAhHpytzjC1fgTGbZS+dwYyildSRT3k7O8V2WQLLkHeTUgqAdW94rOS0gaMuSdyKnFQTtGfJO5PSA4JqIvLNyekG88hbl9IJ45P1XzgiIRd6qnFEQrbxVORkgNXlVcrJASvKq5WSBzMlrkpMJcikvPiPBGbb18UC1c0YW36eYV9t6bWB2RKzjFdszIkKBaSDNkZpIzRGrI8jMjlKxraeW2tT8npftFzl2r4ZZRQOCsQEBGPdeUrsBLQj6wfQcpH7UOvX8bgHp+8fmRvfGAwIgTBHVGy8I3ZsICNWbKAjNGxZI2BsmSMgbNkjvDR5vUw6bAeLyJhPE5E02iNqbJUBU3twViCqFyI6IenPMBEHegvxFlWZmgGDgmy9oKh/mMjhmRNQ+ZIKE08doRFw+sCPi9oEJEvKBBRL2IQpC8yECQvXBC0L3wQOymr8lPO/Trmv+ADLakEWQ8VcxAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-drop-arrows-arrow-down {
+    width: 32px;
+    height: 32px;
+    background-position: -1px -1px;
+}
+
+.sprite-drop-arrows-arrow-right {
+    width: 32px;
+    height: 32px;
+    background-position: -1px -35px;
+}
